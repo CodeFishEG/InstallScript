@@ -47,6 +47,7 @@ echo -e "\n---- Update Server ----"
 sudo add-apt-repository universe
 sudo apt-get update
 sudo apt-get upgrade -y
+sudo apt install -y git python3-pip build-essential wget python3-dev python3-venv python3-wheel libxslt-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools node-less
 
 #--------------------------------------------------
 # Install PostgreSQL Server
@@ -248,6 +249,11 @@ sudo chown root: /etc/init.d/$OE_CONFIG
 echo -e "* Start ODOO on Startup"
 sudo update-rc.d $OE_CONFIG defaults
 
+#--------------------------------------------------
+# Adding ODOO as a deamon (initscript)
+#--------------------------------------------------
+echo -e "install odoo requirements"
+sudo pip3 install -r /OE_HOME_EXT/requirements.txt
 echo -e "* Starting Odoo Service"
 sudo su root -c "/etc/init.d/$OE_CONFIG start"
 echo "-----------------------------------------------------------"
