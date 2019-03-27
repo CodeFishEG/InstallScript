@@ -458,6 +458,8 @@ fi
       ADDONS_PATH=`echo /odoo/odoo-server/addons,/odoo/custom/addons,$ADDONS_PATH | sed "s,//,/,g" | sed "s,/,\\\\\/,g" | sed "s,.$,,g" `
      sed -ibak "s/addons_path.*/addons_path = $ADDONS_PATH/" /etc/odoo-server.conf
 echo -e "install odoo requirements"
+ sudo apt install libldap2-dev libsasl2-dev
+ sudo pip3 install pyldap
  sudo pip3 install -r /$OE_USER/$OE_CONFIG/requirements.txt
  sudo pip3 install configparser
  sudo pip3 install future
