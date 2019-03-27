@@ -461,6 +461,7 @@ echo -e "install odoo requirements"
  sudo pip3 install -r /$OE_USER/$OE_CONFIG/requirements.txt
  sudo pip3 install configparser
  sudo pip3 install future
+ pip3 install num2words
  pip3 install PyXB
  pip3 install MySQL-python
  pip3 install -r oca/account-analytic/requirements.txt
