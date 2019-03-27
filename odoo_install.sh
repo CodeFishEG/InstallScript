@@ -576,6 +576,7 @@ echo -e "install odoo requirements"
  pip3 install -r it-projects-llc/odoo-saas-tools/requirements.txt
  pip3 install -r it-projects-llc/odoo-telegram/requirements.txt
 
+sudo su root -c "/etc/init.d/$OE_CONFIG start"
 echo -e "* restarting Odoo Service"
 sudo su root -c "/etc/init.d/$OE_CONFIG restart"
 #--------------------------------------------------
