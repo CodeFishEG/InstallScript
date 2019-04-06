@@ -34,7 +34,7 @@ OE_SUPERADMIN="admin"
 OE_CONFIG="${OE_USER}-server"
 DOMAIN="codefish.com.eg"
 OCA="True"
-SAAS="True"
+SAAS="False"
 
 ##
 ###  WKHTMLTOPDF download links
